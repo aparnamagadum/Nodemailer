@@ -19,8 +19,7 @@ function App() {
   }
   return (
     <>
-      onSubmit={sendData}
-     <form >
+     <form onSubmit={sendData}>
       <h1>Contact</h1>
       <input type="text" name="name" placeholder='enter your name' value={name} onChange={(e)=>setName(e.target.value)}/>
       <input type="email" name="email" placeholder='enter your mail' value={email} onChange={(e)=>setEmail(e.target.value)}/>
