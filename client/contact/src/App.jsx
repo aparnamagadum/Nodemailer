@@ -7,19 +7,20 @@ function App() {
   const [name,setName]=useState('');
   const [email,setEmail]=useState('');
   const [text,setText]=useState('');
-  async function sendData(e){
-    e.preventDefault();
-    try{
-    await axios.post('http://localhost:3939/sendMail' , {name , email , text})
-    console.log("mail sent");
+  // async function sendData(e){
+  //   e.preventDefault();
+  //   try{
+  //   await axios.post('http://localhost:3939/sendMail' , {name , email , text})
+  //   console.log("mail sent");
     
-    }
-    catch(err){console.log(err);}
+  //   }
+  //   catch(err){console.log(err);}
     
-  }
+  // }
   return (
     <>
-     <form onSubmit={sendData}>
+    {/* //onSubmit={sendData} */}
+     <form >
       <h1>Contact</h1>
       <input type="text" name="name" placeholder='enter your name' value={name} onChange={(e)=>setName(e.target.value)}/>
       <input type="email" name="email" placeholder='enter your mail' value={email} onChange={(e)=>setEmail(e.target.value)}/>
