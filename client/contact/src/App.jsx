@@ -10,7 +10,7 @@ function App() {
   async function sendData(e){
     e.preventDefault();
     try{
-    await axios.post('https://nodemailer-server-jn33.onrender.com/sendMail' , {name , email , text})
+    await axios.post('http://localhost:3939/sendMail' , {name , email , text})
     console.log("mail sent");
     
     }
